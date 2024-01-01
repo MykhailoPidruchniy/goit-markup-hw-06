@@ -172,13 +172,17 @@ display: none;
 
 @media screen and (min-width: 768px) {
     .menu {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-right: 121px;
     }
 }
 
 @media screen and (min-width: 1158px) {
     .menu {
         flex-direction: row;
+        margin-right: 332px;
     }
 }
 
@@ -701,7 +705,7 @@ transform: translateY(0%);
 
 @media screen and (min-width: 768px) {
     .end {
-    display: flex;
+    /* display: flex; */
     /* flex-wrap: wrap; */
    
     }
@@ -842,6 +846,12 @@ text-align: left;
     letter-spacing: 0.02em;
     color: #ffffff;
     text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .massage {
+        text-align: left;
+    }
 }
 
 .massage-form {
