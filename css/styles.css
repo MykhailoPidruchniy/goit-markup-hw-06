@@ -6,7 +6,7 @@ body {
 
 img {
     display: block;
-    min-width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -93,7 +93,6 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     margin-right: auto;
     align-items: center;
-    /* gap: 40px;   */
     gap: 12px;
     flex-direction: column;
 }
@@ -101,6 +100,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 @media screen and (min-width: 1158px) {
     .header-contacts {
         flex-direction: row;
+        gap: 40px;  
     }
 }
 
@@ -124,7 +124,7 @@ padding: 0;
 
 
 .container {
-    min-width: 320px;
+    max-width: 320px;
     padding-left: 16px;
     padding-right: 16px;
    margin-left: auto;
@@ -232,16 +232,22 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 
 .dark-blue {
     margin: 0 auto;
-    max-width: 320px; 
+    /* max-width: 320px;  */
     padding: 72px 0px;
     background-color: #2E2F42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mob@2x.png);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mob@1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-resolution: 192dpi) {
+    .dark-blue {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mob@2x.jpg);   
+    } 
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
     .dark-blue {
         padding: 112px 0px;
         max-width: 768px;
@@ -254,8 +260,17 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     .dark-blue {
         padding: 188px 0px;
         max-width: 1440px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    }
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .dark-blue {
+        padding: 112px 0px;
+        max-width: 768px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-desk@2x.jpg);
     }
+
 }
 
 .business {
@@ -593,8 +608,8 @@ flex-direction: column;
 }
 
 .image-portfolio {
-width: 360px;
 transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 @media screen and (min-width: 768px) {
@@ -1029,7 +1044,7 @@ text-align: left;
 }
 
 .form-input {
-    width: 360px;
+    width: 100%;
     height: 40px;
     border-radius: 4px;
     background-color: transparent;
@@ -1061,7 +1076,7 @@ border-color: #4D5AE5;
   }
 
 .coment-area {
-    width: 360px;
+    width: 100%;
     height: 120px;
     padding: 8px 16px;
     border-radius: 4px;
